@@ -1,0 +1,7 @@
+pretrain_weight_gdown_id:
+  save_dir: experiments\pretrained_models
+  id:
+    - 1fE0fwm7tv0uJLfsY4xfguGeGKDFd8XNz
+  names:
+    - Real_HAT_GAN_SRx4.pth
+
