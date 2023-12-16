@@ -1,7 +1,18 @@
 pretrain_weight_gdown_id:
-  save_dir: experiments\pretrained_models
+  save_dir: experiments/pretrained_models
   id:
     - 1fE0fwm7tv0uJLfsY4xfguGeGKDFd8XNz
   names:
     - Real_HAT_GAN_SRx4.pth
+data_wget:
+  save_dir: datasets
+  paths:
+    - http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_LR_wild.zip
+    - http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_wild.zip
+    - http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip
+  names:
+    - DIV2K/DIV2K_valid_LR_wild
+    - DIV2K/DIV2K_train_LR_wild
+    - DIV2K/DIV2K_train_HR_wild
+  
 

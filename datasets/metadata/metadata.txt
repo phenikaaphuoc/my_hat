@@ -1,5 +1,0 @@
-testdata_hr/baby.png
-testdata_hr/bird.png
-testdata_hr/butterfly.png
-testdata_hr/head.png
-testdata_hr/woman.png

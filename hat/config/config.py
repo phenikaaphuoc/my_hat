@@ -8,6 +8,8 @@ class ConfigManager:
 
     def get_pretrain_weight_gdown_id(self):
         return  self.config.pretrain_weight_gdown_id
+    def get_data_config(self):
+        pass
     
 
 

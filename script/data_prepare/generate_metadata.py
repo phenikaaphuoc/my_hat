@@ -34,7 +34,7 @@ if __name__ == '__main__':
     parser.add_argument(
         '--input',
         nargs='+',
-        default=["datasets/testdata_hr"],
+        default=["datasets/testdata_hr","datasets"],
         help='Input folder, can be a list')
     parser.add_argument(
         '--root',
