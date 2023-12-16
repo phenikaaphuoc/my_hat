@@ -15,5 +15,6 @@ import gdown
 #         print(f"Can download file id {id}")
 
 
-os.system(f"python script/data_prepare/generate_metadata.py ")
+# os.system(f"python script/data_prepare/generate_metadata.py ")
 
+os.system("python hat/train.py -opt options/train/train_Real_HAT_GAN_SRx4_finetune_from_mse_model.yml")
