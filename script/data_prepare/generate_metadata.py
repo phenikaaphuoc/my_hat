@@ -34,12 +34,12 @@ if __name__ == '__main__':
     parser.add_argument(
         '--input',
         nargs='+',
-        default=["datasets/testdata_hr","datasets"],
+        default=["datasets/traindata_hr","datasets/traindata_lr"],
         help='Input folder, can be a list')
     parser.add_argument(
         '--root',
         nargs='+',
-        default=["datasets"],
+        default=["datasets","datasets"],
         help='Folder root, should have the length as input folders')
     parser.add_argument(
         '--meta_info',

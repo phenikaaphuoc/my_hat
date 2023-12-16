@@ -1,9 +1,11 @@
 pretrain_weight_gdown_id:
-  save_dir: experiments/pretrained_models
+  save_dir: experiments/train_HAT-L_SRx4_ImageNet_from_scratch/models
   id:
     - 1fE0fwm7tv0uJLfsY4xfguGeGKDFd8XNz
+    - 16xtMezHvckdWEuSiOxcO-dgOlsI0rEUg
   names:
     - Real_HAT_GAN_SRx4.pth
+    - net_g_latest.pth
 data_wget:
   save_dir: datasets
   paths:
