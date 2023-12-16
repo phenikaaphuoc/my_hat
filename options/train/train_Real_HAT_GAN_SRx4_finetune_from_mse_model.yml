@@ -38,8 +38,8 @@ datasets:
   train:
     name: DF2K+OST
     type: RealESRGANDataset
-    dataroot_gt: datasets/DFO/DFO_sub # Refer to Real-ESRGAN for OST dataset. Only DF2K is OK.
-    meta_info_file: hat/data/meta_info/meta_info_DFOsub_GT.txt
+    dataroot_gt: datasets\\testdata_hr # Refer to Real-ESRGAN for OST dataset. Only DF2K is OK.
+    meta_info_file: datasets\\metadata\\metadata.txt
     io_backend:
       type: disk
 
@@ -108,7 +108,7 @@ network_d:
 # path
 path:
   # use the pre-trained Real-ESRNet model
-  pretrain_network_g: experiments/pretrained_models/Real_HAT_x4.pth # train the MSE-based model 'Real_HAT' first.
+  pretrain_network_g: experiments/pretrained_models/Real_HAT_GAN_SRx4.pth # train the MSE-based model 'Real_HAT' first.
   param_key_g: params_ema
   strict_load_g: true
   resume_state: ~

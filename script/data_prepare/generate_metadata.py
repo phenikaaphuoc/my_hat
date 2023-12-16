@@ -34,17 +34,17 @@ if __name__ == '__main__':
     parser.add_argument(
         '--input',
         nargs='+',
-        default=['/path/to/your/training GT dataset/'],
+        default=[r"datasets\testdata_hr"],
         help='Input folder, can be a list')
     parser.add_argument(
         '--root',
         nargs='+',
-        default=['/path/to/your/training GT dataset/'],
+        default=[r"datasets"],
         help='Folder root, should have the length as input folders')
     parser.add_argument(
         '--meta_info',
         type=str,
-        default='/path/to/your/save meta info file/meta_info_DF2K_OST_HR.txt',
+        default=r'datasets\metadata\metadata.txt',
         help='txt path for meta info')
     parser.add_argument('--check', action='store_true', help='Read image to check whether it is ok')
     args = parser.parse_args()
