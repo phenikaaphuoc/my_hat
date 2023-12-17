@@ -3,6 +3,8 @@ import os
 # os.system("pip install --upgrade gdown")
 import gdown
 
+# import warnings
+# warnings.filterwarnings("ignore", category=UserWarning)
 
 gdown_id_config = ConfigManager().get_pretrain_weight_gdown_id()
 os.makedirs(gdown_id_config.save_dir,exist_ok = True)

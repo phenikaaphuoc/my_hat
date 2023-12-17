@@ -8,4 +8,4 @@ pathlib==1.0.1
 wget
 tqdm==4.65.0
 opencv-python==4.8.1.78
-numpy
+numpy==1.23.5
