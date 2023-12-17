@@ -12,7 +12,7 @@ datasets:
     type: PairedImageDataset
     dataroot_gt: datasets/traindata_hr
     dataroot_lq: datasets/testdata_hr
-    meta_info_file: hat/data/meta_info/meta_info_DF2Ksub_GT.txt
+    meta_info_file: datasets/metadata/metadata.txt
     io_backend:
       type: disk
 
@@ -102,22 +102,22 @@ train:
     reduction: mean
 
 # validation settings
-val:
-  val_freq: !!float 5e3
-  save_img: false
-  pbar: False
+# val:
+#   val_freq: !!float 5e3
+#   save_img: false
+#   pbar: False
 
-  metrics:
-    psnr:
-      type: calculate_psnr
-      crop_border: 4
-      test_y_channel: true
-      better: higher  # the higher, the better. Default: higher
-    ssim:
-      type: calculate_ssim
-      crop_border: 4
-      test_y_channel: true
-      better: higher  # the higher, the better. Default: higher
+#   metrics:
+#     psnr:
+#       type: calculate_psnr
+#       crop_border: 4
+#       test_y_channel: true
+#       better: higher  # the higher, the better. Default: higher
+#     ssim:
+#       type: calculate_ssim
+#       crop_border: 4
+#       test_y_channel: true
+#       better: higher  # the higher, the better. Default: higher
 
 # logging settings
 logger:

@@ -68,6 +68,28 @@ def destroy_folder_image(input_path,output_path,size = (64,64)):
             new_path = os.path.join(output_path,file_name)
             cv2.imwrite(new_path,image, [cv2.IMWRITE_JPEG_QUALITY, 60] )
 
+def rename_file_helper(old_name, new_name):
+    try:
+        os.rename(old_name, new_name)
+        print(f"File renamed from {old_name} to {new_name}")
+    except FileNotFoundError:
+        print(f"File not found: {old_name}")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+def rename_file(gt_folder = r"D:\HAT\datasets\hi",lr_folder = r"D:\HAT\datasets\hi2"):
+    list_image = glob.glob(os.path.join(gt_folder,"*"))
+    for i,old_path_gt in enumerate(list_image):
+        name_image = old_path_gt.split(os.sep)[-1]
+        old_path_lr = os.path.join(lr_folder,name_image)
+        ext = name_image.split(".")[-1]
+        new_name = str(i)+"."+ext
+        new_path_gt = os.path.join(gt_folder,new_name)
+        new_path_lr = os.path.join(lr_folder,new_name)
+        rename_file_helper(old_path_gt,new_path_gt)
+        rename_file_helper(old_path_lr,new_path_lr)
+
+    
+
 
 
 
