@@ -12,6 +12,9 @@ from os import path as osp
 
 @MODEL_REGISTRY.register()
 class HATModel(SRModel):
+    def __init__(self,opt):
+        super(HATModel, self).__init__(opt)
+        self.opt = opt
          
     def pre_process(self):
         # pad to multiplication of window_size

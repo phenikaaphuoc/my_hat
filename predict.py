@@ -8,11 +8,12 @@ from cog import BasePredictor, Input, Path
 
 
 class Predictor(BasePredictor):
+
     def predict(
         self,
         image: Path = Input(
             description="Input Image.",
-        ),
+        )
     ) -> Path:
         input_dir = "input_dir"
         output_path = Path(tempfile.mkdtemp()) / "output.png"
@@ -48,3 +49,12 @@ class Predictor(BasePredictor):
             shutil.rmtree("results")
 
         return output_path
+if __name__ == "__main__":
+    # predictor = Predictor()
+    input_dir = "input_dir"
+    output_path = Path(tempfile.mkdtemp()) / "output.png"
+    for d in [input_dir, "results"]:
+        if os.path.exists(input_dir):
+            shutil.rmtree(input_dir)
+    
+    os.makedirs(input_dir, exist_ok=False)
