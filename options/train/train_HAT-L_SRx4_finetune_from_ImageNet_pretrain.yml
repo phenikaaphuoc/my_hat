@@ -11,7 +11,7 @@ datasets:
     name: DF2K
     type: PairedImageDataset
     dataroot_gt: datasets/traindata_hr
-    dataroot_lq: datasets/testdata_hr
+    dataroot_lq: datasets/traindata_lr
     meta_info_file: datasets/metadata/metadata.txt
     io_backend:
       type: disk
