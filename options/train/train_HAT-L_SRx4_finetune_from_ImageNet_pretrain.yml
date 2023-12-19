@@ -2,7 +2,7 @@
 name: train_HAT-L_SRx4_finetune_from_ImageNet_pretrain
 model_type: HATModel
 scale: 4
-num_gpu: auto
+num_gpu: 2
 manual_seed: 0
 
 # dataset and data loader settings
