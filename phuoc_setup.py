@@ -1,5 +1,6 @@
 # from hat.config.config import ConfigManager
-import os 
+from os import path as osp
+from hat.phuoc_test import get_hat_model
 # os.system("pip install --upgrade gdown")
 # import gdown
 
@@ -23,4 +24,11 @@ import os
 
 # os.system("python hat/train.py -opt options/train/train_HAT-L_SRx4_finetune_from_ImageNet_pretrain.yml")
 
-os.system("python hat/test.py -opt options/test/HAT-L_SRx4_ImageNet-pretrain.yml")
+# os.system("python hat/test.py -opt options/test/HAT-L_SRx4_ImageNet-pretrain.yml")
+
+
+if __name__ == '__main__':
+    root_path = osp.abspath(osp.join(__file__, osp.pardir, osp.pardir))
+    
+    model = get_hat_model(root_path)
+    model.predict(r"D:\HAT\datasets\val_dataset\lr",r"D:\HAT\datasets\val_dataset\gen2")

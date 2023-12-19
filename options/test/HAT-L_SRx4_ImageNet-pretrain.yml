@@ -67,7 +67,7 @@ network_g:
 
 # path
 path:
-  pretrain_network_g: C:/Users/phuoc/Downloads/net_g_5000.pth
+  pretrain_network_g: D:\HAT\experiments\train_HAT-L_SRx4_ImageNet_from_scratch\models\net_g_latest.pth
   strict_load_g: true
   param_key_g: 'params_ema'
 

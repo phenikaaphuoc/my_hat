@@ -89,12 +89,7 @@ def rename_file(gt_folder = r"D:\HAT\datasets\hi",lr_folder = r"D:\HAT\datasets\
         rename_file_helper(old_path_lr,new_path_lr)
 
     
-
-
-
-
-
-
-
-
-
+def read_opt(file_path):
+    with open(file_path, 'r') as file:
+        data = yaml.safe_load(file)
+    return data
